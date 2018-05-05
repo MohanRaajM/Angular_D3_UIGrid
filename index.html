@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.5/angular.min.js"></script>
+  <script src="app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.4.9/ui-grid.min.js"></script>
+  <script src="scripts/d3.v3.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-grid/4.4.9/ui-grid.min.css">
+  <script src="controllers/testController.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <div ng-controller="testController">
+	<div class="btn-group" data-toggle="buttons">
+		<input type="radio" ng-model="radioption" value="grid" id="checkbox-1" />
+		<label for="checkbox-1" style="margin-right:12px;">Grid</label>
+		<input type="radio" ng-model="radioption" value="chart" id="checkbox-1" />
+		<label for="checkbox-1">Chart</label>
+	</div>
+	<br/><br/><br/>
+	<div ng-show="radioption == 'grid'">
+	    <div ui-grid="gridOptions" class="myGrid"></div>
+	</div>
+	<div ng-show="radioption == 'chart'">
+		<div id="chart"></div>
+		<script src="scripts/chart.js"></script>
+	</div>
+    </div>
+  </div>
+ </body>
+</html>

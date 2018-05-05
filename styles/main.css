@@ -1,0 +1,62 @@
+/*Sets some default styles to display the grid*/
+
+body {
+  font-family: sans-serif;
+  margin: 0 auto;
+  width: 1000px;
+  padding-top: 50px;
+}
+
+
+/*Height and width of the grid*/
+
+.myGrid {
+  width: 900px;
+  height: 235px;
+}
+
+
+/*Moves the dropdown triangle to the next line*/
+
+.ui-grid-column-menu-button {
+  position: static;
+  text-align: right;
+  bottom: 0;
+}
+
+
+/*Sets the height and background for the header*/
+
+.form-inline {
+  background-color: #282828;
+  height: 50px;
+  padding: 7px;
+}
+
+
+/*Resets right margin on the last column to 0px by default ui-grid sets it to 25px*/
+
+.ui-grid-column-menu-button-last-col {
+  margin-right: 0px;
+}
+
+
+/*Header text format background and foreground color*/
+
+.ui-grid-header-cell-primary-focus {
+  background-color: #505050;
+  color: #c0c0c0;
+  font-weight: normal;
+}
+
+
+ .axis {
+   font: 10px sans-serif;
+ }
+
+ .axis path,
+ .axis line {
+   fill: none;
+   stroke: #000;
+   shape-rendering: crispEdges;
+ }
